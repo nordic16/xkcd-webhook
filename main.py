@@ -1,10 +1,10 @@
 if __name__ == '__main__':
     from discord_webhook import DiscordWebhook, DiscordEmbed
+    from datetime import datetime, timedelta
     import requests, time, random
     import config
 
-    
-    webhook = DiscordWebhook(url=config.URL)
+
     def get_latest_comic_num() -> int:
         json = requests.get('https://xkcd.com/info.0.json').json()
 
@@ -19,6 +19,8 @@ if __name__ == '__main__':
     between 1 and x. Then retrieve the comic whose id is y.
     """
     def send_random_comic():
+        webhook = DiscordWebhook(url=config.URL)
+
         max = get_latest_comic_num()
         rand = random.randrange(1, max + 1)
 
@@ -41,4 +43,8 @@ if __name__ == '__main__':
 
     while True:
         send_random_comic()
-        time.sleep(15)
+
+        waitTime = datetime.now()  + timedelta(hours=1)
+
+        while datetime.now() < waitTime:
+            time.sleep(1)
