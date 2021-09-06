@@ -1,1 +1,0 @@
-URL="https://discord.com/api/webhooks/809877761702363187/Jz5E-auiW3JGMG7D_dIVc34CZ1Hp_SdIYbj7WeJ6AgVDeOLa4g3z3ZuOOkb67PDMSPd_"
