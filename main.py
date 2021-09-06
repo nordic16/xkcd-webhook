@@ -20,6 +20,7 @@ if __name__ == '__main__':
     """
     def send_random_comic():
         webhook = DiscordWebhook(url=config.URL)
+        webhook.avatar_url = "https://pbs.twimg.com/profile_images/1364920241265012743/Y__158zv.png"
 
         max = get_latest_comic_num()
         rand = random.randrange(1, max + 1)
