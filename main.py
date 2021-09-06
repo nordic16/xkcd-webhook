@@ -44,7 +44,7 @@ if __name__ == '__main__':
     while True:
         send_random_comic()
 
-        waitTime = datetime.now()  + timedelta(hours=1)
+        waitTime = datetime.now()  + timedelta(hours=5)
 
         while datetime.now() < waitTime:
             time.sleep(1)
